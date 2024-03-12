@@ -108,6 +108,7 @@ li {
   cursor: pointer;
   position: absolute;
   right: 1px;
+  transition: .3s ease all;
 }
 
 /*! header end */
@@ -305,3 +306,42 @@ li {
 /*? movie list end */
 
 /*! content end */
+
+/*! dark mode start */
+
+.container.active {
+  background-color: #fff;
+}
+
+.header.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.sidebar.active {
+  background-color: #fff;
+}
+
+.sidebar i.active {
+  color: #000;
+}
+
+.movie-list-title.active {
+  color: #000;
+}
+
+.toggle.active {
+  background-color: #000;
+}
+
+.profile-container .toggle-ball.active {
+  background-color: #fff;
+  transform: translateX(-20px);
+}
+
+.movie-list-filter select.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/*! dark mode end */

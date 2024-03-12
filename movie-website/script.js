@@ -6,7 +6,7 @@ arrows.forEach((arrow, i) => {
   const imageItem = movieLists[i].querySelectorAll("img").length;
   arrow.addEventListener("click", function () {
     clickCounter++;
-    if (imageItem - (6 + clickCounter) >= 0) {
+    if (imageItem - (5 + clickCounter) >= 0) {
       movieLists[i].style.transform = `translateX(${
         movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
       }px)`;
@@ -14,4 +14,15 @@ arrows.forEach((arrow, i) => {
       movieLists[i].style.transform = "translateX(0)";
     }
   });
+});
+
+/* dark mode */
+
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+  ".container,.header,.sidebar,.sidebar i,.movie-list-title,.toggle,.profile-container .toggle-ball,.movie-list-filter select"
+);
+
+ball.addEventListener("click", function () {
+  items.forEach((item) => item.classList.toggle("active"));
 });
